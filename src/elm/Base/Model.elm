@@ -52,4 +52,7 @@ baseBlockquote =
 
 viewBlockquote : Html msg
 viewBlockquote =
-    blockquote [] [ text "Even better philosophical quote marked up with just a &lt;blockquote> element." ]
+    div []
+        [ blockquote [] [ text "Blockquote without a <p> tag" ]
+        , blockquote [] [ p [] [ text "Blockquote inside a <p> tag" ] ]
+        ]
