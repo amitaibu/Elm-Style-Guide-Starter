@@ -8,6 +8,11 @@ module Base.Model exposing
 import Html.String as Html exposing (..)
 
 
+{-| Base elements mostly copied as-is from
+
+<https://github.com/bjankord/Style-Guide-Boilerplate/tree/main/markup/base>
+
+-}
 type alias BaseElement msg =
     { name : String
     , html : Html msg
