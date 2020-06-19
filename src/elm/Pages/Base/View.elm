@@ -5,6 +5,7 @@ import Color.Model
 import Html exposing (..)
 import Html.Attributes exposing (class, rows, style, value)
 import Html.String
+import Html.String.Attributes
 import Pages.Base.Model exposing (Model, Msg(..))
 
 
@@ -53,6 +54,13 @@ viewColorElements =
                             , style "width" "100px"
                             ]
                             []
+                        , details []
+                            [ textarea
+                                [ value <| Html.String.toString 4 (Html.String.div [ Html.String.Attributes.class <| "bg-" ++ element.className ] [])
+                                , rows 15
+                                ]
+                                []
+                            ]
                         ]
                 )
                 Color.Model.allColorType
