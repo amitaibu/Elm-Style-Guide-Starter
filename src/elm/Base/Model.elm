@@ -1,10 +1,17 @@
 module Base.Model exposing
-    ( allBases
+    ( BaseElement
+    , allBases
     , baseAddress
     , baseBlockquote
     )
 
 import Html.String as Html exposing (..)
+
+
+type alias BaseElement msg =
+    { name : String
+    , html : Html msg
+    }
 
 
 allBases =
@@ -40,9 +47,4 @@ baseBlockquote =
 
 viewBlockquote : Html msg
 viewBlockquote =
-    div []
-        [ blockquote []
-            [ p [] [ text "Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element." ]
-            ]
-        , blockquote [] [ text "Even better philosophical quote marked up with just a &lt;blockquote> element." ]
-        ]
+    blockquote [] [ text "Even better philosophical quote marked up with just a &lt;blockquote> element." ]

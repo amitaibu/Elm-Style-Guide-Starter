@@ -15,7 +15,8 @@ view hostUrl model =
             (List.map
                 (\element ->
                     div []
-                        [ Html.String.toHtml element.html
+                        [ h2 [] [ text element.name ]
+                        , Html.String.toHtml element.html
                         , details []
                             [ textarea
                                 [ value <| Html.String.toString 4 element.html
