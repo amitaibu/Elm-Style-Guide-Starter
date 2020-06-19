@@ -1,8 +1,9 @@
 module Pages.Base.View exposing (view)
 
 import Base.Model
+import Color.Model
 import Html exposing (..)
-import Html.Attributes exposing (rows, value)
+import Html.Attributes exposing (class, rows, style, value)
 import Html.String
 import Pages.Base.Model exposing (Model, Msg(..))
 
@@ -10,7 +11,8 @@ import Pages.Base.Model exposing (Model, Msg(..))
 view : String -> Model -> Html Msg
 view hostUrl model =
     div []
-        [ h1 [] [ text "Base elements" ]
+        [ viewColorElements
+        , h1 [] [ text "Base elements" ]
         , div []
             (List.map
                 (\element ->
@@ -27,5 +29,32 @@ view hostUrl model =
                         ]
                 )
                 Base.Model.allBases
+            )
+        ]
+
+
+viewColorElements : Html Msg
+viewColorElements =
+    div []
+        [ h1 [] [ text "Colors" ]
+        , div [ style "display" "flex" ]
+            (List.map
+                (\colorType ->
+                    let
+                        element =
+                            Color.Model.getColorElement colorType
+                    in
+                    div [ style "flex" "1 100%" ]
+                        [ h2 [] [ text element.name ]
+                        , div
+                            [ -- @todo: Is `bg-` here ok?
+                              class <| "bg-" ++ element.className
+                            , style "height" "100px"
+                            , style "width" "100px"
+                            ]
+                            []
+                        ]
+                )
+                Color.Model.allColorType
             )
         ]
