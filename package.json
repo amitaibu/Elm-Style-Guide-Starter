@@ -2,25 +2,17 @@
   "name": "elm-style-guide-starter",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {
-    "@material/textfield": "^2.3.1",
-    "material-components-web": "^2.3.0",
-    "prosemirror-example-setup": "^1.0.1",
-    "prosemirror-model": "^1.7.0",
-    "prosemirror-schema-basic": "^1.0.1",
-    "prosemirror-state": "^1.2.3",
-    "prosemirror-view": "^1.9.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^4.0.0",
-    "elm-hot": "^1.0.1",
-    "gh-pages": "^2.0.1",
+    "elm-hot": "^1.1.4",
+    "gh-pages": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-sequence": "^1.0.0",
-    "node-elm-compiler": "^5.0.3",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.20.1"
+    "node-elm-compiler": "^5.0.4",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.8"
   },
   "scripts": {},
   "repository": {

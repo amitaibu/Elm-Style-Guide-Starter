@@ -1,7 +1,7 @@
-module Pages.Scripts.View exposing (view)
+module Pages.Atoms.View exposing (view)
 
 import Html exposing (..)
-import Pages.Scripts.Model exposing (Model, Msg(..))
+import Pages.Atoms.Model exposing (Model, Msg(..))
 
 
 view : String -> Model -> Html Msg

@@ -1,4 +1,4 @@
-module Pages.Scripts.Model exposing
+module Pages.Atoms.Model exposing
     ( Model
     , Msg(..)
     , emptyModel

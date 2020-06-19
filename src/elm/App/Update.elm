@@ -5,7 +5,7 @@ module App.Update exposing
 
 import App.Model exposing (..)
 import App.Utils exposing (updateSubModel)
-import Pages.Scripts.Update
+import Pages.Atoms.Update
 
 
 init : Flags -> ( Model, Cmd Msg )
@@ -31,13 +31,13 @@ update msg model =
             , Cmd.none
             )
 
-        MsgPageScripts subMsg ->
+        MsgPageAtoms subMsg ->
             updateSubModel
                 subMsg
-                model.pageScripts
-                (\subMsg_ subModel -> Pages.Scripts.Update.update subMsg_ subModel)
-                (\subModel model_ -> { model_ | pageScripts = subModel })
-                (\subCmds -> MsgPageScripts subCmds)
+                model.pageAtoms
+                (\subMsg_ subModel -> Pages.Atoms.Update.update subMsg_ subModel)
+                (\subModel model_ -> { model_ | pageAtoms = subModel })
+                (\subCmds -> MsgPageAtoms subCmds)
                 model
 
         NoOp ->

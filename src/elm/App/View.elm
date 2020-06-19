@@ -3,16 +3,16 @@ module App.View exposing (view)
 import App.Model exposing (Model, Msg(..))
 import App.Types exposing (Page(..))
 import Html exposing (..)
-import Pages.Scripts.View
+import Pages.Atoms.View
 
 
 view : Model -> Html Msg
 view model =
     case model.activePage of
-        Scripts ->
+        Atoms ->
             div []
-                [ Html.map MsgPageScripts <|
-                    Pages.Scripts.View.view
+                [ Html.map MsgPageAtoms <|
+                    Pages.Atoms.View.view
                         model.hostUrl
-                        model.pageScripts
+                        model.pageAtoms
                 ]

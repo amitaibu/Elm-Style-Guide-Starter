@@ -1,7 +1,7 @@
-module Pages.Scripts.Update exposing (update)
+module Pages.Atoms.Update exposing (update)
 
 import App.Model exposing (PagesReturn)
-import Pages.Scripts.Model exposing (Model, Msg(..))
+import Pages.Atoms.Model exposing (Model, Msg(..))
 
 
 update : Msg -> Model -> PagesReturn Model Msg
