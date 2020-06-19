@@ -7,7 +7,7 @@ appDiv.appendChild(elmNode);
 const app = Elm.Main.init({
     node: elmNode,
     flags: {
-        hostname: window.location.href,
+        hostUrl: window.location.href,
     }
 });
 
