@@ -7,7 +7,7 @@ module App.Model exposing
     )
 
 import App.Types exposing (Page(..))
-import Pages.Atoms.Model
+import Pages.Base.Model
 import Time
 
 
@@ -18,7 +18,7 @@ type alias PagesReturn subModel subMsg =
 
 
 type Msg
-    = MsgPageAtoms Pages.Atoms.Model.Msg
+    = MsgPageBase Pages.Base.Model.Msg
     | NoOp
     | SetActivePage Page
 
@@ -31,15 +31,15 @@ type alias Flags =
 type alias Model =
     { activePage : Page
     , currentDate : Time.Posix
-    , pageAtoms : Pages.Atoms.Model.Model
+    , pageBase : Pages.Base.Model.Model
     , hostUrl : String
     }
 
 
 emptyModel : Model
 emptyModel =
-    { activePage = App.Types.Atoms
+    { activePage = App.Types.Base
     , currentDate = Time.millisToPosix 0
-    , pageAtoms = Pages.Atoms.Model.emptyModel
+    , pageBase = Pages.Base.Model.emptyModel
     , hostUrl = ""
     }
