@@ -2,14 +2,22 @@
   color: $primary-color;
 }
 
-.bg-primary {
-  background-color: $primary-color;
-}
-
 .secondary {
   color: $secondary-color;
 }
 
+.notice {
+  color : $notice-color;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+}
+
 .bg-secondary {
   background-color: $secondary-color;
+}
+
+.bg-notice {
+  background-color : $notice-color;
 }

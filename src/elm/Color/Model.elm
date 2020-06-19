@@ -12,12 +12,14 @@ module Color.Model exposing
 type ColorType
     = Primary
     | Secondary
+    | Notice
 
 
 allColorType : List ColorType
 allColorType =
     [ Primary
     , Secondary
+    , Notice
     ]
 
 
@@ -41,4 +43,9 @@ getColorElement colorType =
         Secondary ->
             { name = "Secondary"
             , className = "secondary"
+            }
+
+        Notice ->
+            { name = "Notice"
+            , className = "notice"
             }
