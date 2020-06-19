@@ -57,7 +57,7 @@ viewColorElements =
                         , details []
                             [ textarea
                                 [ value <| Html.String.toString 4 (Html.String.div [ Html.String.Attributes.class <| "bg-" ++ element.className ] [])
-                                , rows 15
+                                , rows 4
                                 ]
                                 []
                             ]
