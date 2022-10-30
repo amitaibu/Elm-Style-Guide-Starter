@@ -4,7 +4,7 @@
   "description": "",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.10",
     "del": "^4.0.0",
     "elm-hot": "^1.1.4",
     "gh-pages": "^2.2.0",
