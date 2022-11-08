@@ -8,7 +8,7 @@
     "del": "^4.0.0",
     "elm-hot": "^1.1.4",
     "gh-pages": "^2.2.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-sequence": "^1.0.0",
     "node-elm-compiler": "^5.0.4",
     "parcel-bundler": "^1.12.4",
